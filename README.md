@@ -12,11 +12,19 @@ Les images prises par la caméra seront analysées afin de detecter les contours
 Deux capteurs télémetriques seront placés vers l'avant droit et gauche du robot (4 capteurs au total), calibrés avec la caméra. 
 Ceux-ci permettront de connaitre la distance à gauche et à droite de l'image (voir schéma).
 ![Schéma capteur télémetrique](images/exemple_capt.jpg)
+
 Il y aura 4 données de télémetrie par image.
-*Avec 4 capteurs seulement, le nombre d'élément ayant une distance dans une image s'élève donc à 4. C'est assez peu. L'objectif ici est de voir si ce système donne des résultats satisfaisant ou non pour le mapping 3D.
+*Avec 4 capteurs seulement, le nombre d'élément ayant une distance dans une image s'élève donc à 4. C'est assez peu. L'objectif ici est de voir si ce système donne des résultats satisfaisants ou non pour le mapping 3D.
 Dans le cas contraire, je rajouterai soit plus de capteurs, soit deux servomoteurs afin de "balayer" les surfaces avec les capteurs télémetriques.*
 
-Toutes ces données (images + télémetries) permettront de reconstruire l'environnement en 3 dimensions.
+La technique est la suivante pour chaque image (pour un coté) :
+* Réalisation d'une détéction de contours (+ détection de zone)
+* Récupération des deux distances et association avec sa "zone"
+* Les zones "non associées" à une distance seront associées soit à un zone précédente (si c'est le même type de zone) ou ne seront pas interprétées.
+* Modélisation (création de points) sur le modèle 3D en prenant en compte les contours formant les zones, les distances de celles-ci, et la position du robot.
+
+
+Toutes ces données (images + distance) permettront de réaliser un mapping en 3 dimensions de l'environnement dans lequel évolue le robot.
 La gestion des redondances de plan d'image est primordiale pour controler la justesse de la modélisation.
 
 ## Composition du robot
