@@ -13,14 +13,14 @@ Deux capteurs télémetriques seront placés vers l'avant droit et gauche du rob
 Ceux-ci permettront de connaitre la distance à gauche et à droite de l'image (voir schéma).
 ![Schéma capteur télémetrique](images/exemple_capt.jpg)
 
-Il y aura 4 données de télémetrie par image.
-*Avec 4 capteurs seulement, le nombre d'élément ayant une distance dans une image s'élève donc à 4. C'est assez peu. L'objectif ici est de voir si ce système donne des résultats satisfaisants ou non pour le mapping 3D.
+Il y aura 4 données de télémetries par image.
+*Avec 4 capteurs seulement, le nombre d'éléments ayant une distance dans une image s'élève donc à 4. C'est assez peu. L'objectif ici est de voir si ce système donne des résultats satisfaisants, ou non, pour le mapping 3D.
 Dans le cas contraire, je rajouterai soit plus de capteurs, soit deux servomoteurs afin de "balayer" les surfaces avec les capteurs télémetriques.*
 
-La technique est la suivante pour chaque image (pour un coté) :
-* Réalisation d'une détéction de contours (+ détection de zone)
-* Récupération des deux distances et association avec sa "zone"
-* Les zones "non associées" à une distance seront associées soit à un zone précédente (si c'est le même type de zone) ou ne seront pas interprétées.
+La technique de mapping est la suivante pour chaque image (pour un seul coté) :
+* Réalisation d'une détéction de contours (+ détection de zone) sur l'image.
+* Récupération des deux distances et association avec leur "zone".
+* Les zones "non associées à une distance" seront associées soit à un zone précédente (si c'est le même type de zone), ou alors ne seront pas interprétées.
 * Modélisation (création de points) sur le modèle 3D en prenant en compte les contours formant les zones, les distances de celles-ci, et la position du robot.
 
 
