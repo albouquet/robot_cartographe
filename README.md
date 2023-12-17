@@ -40,5 +40,6 @@ Quatres capteurs télémetriques et une picaméra sont nécessaires.
 * 12/11/2023 : Création du projet.
 * 19/11/2023 : Actualisation du principe de modélisation et de la composition du robot.
 * 26/11/2023 : Test des capteurs vl53l0x (en I2C) et TfMini (UART).
+* 17/12/2023 : Test de transmission et reception vidéo
 
 
