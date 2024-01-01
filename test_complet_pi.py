@@ -12,7 +12,7 @@ import threading
 from adafruit_vl53l0x import VL53L0X
 
 ###########	INITIALISATION du thread de reception des commandes
-t_control=threading.Thread(target=controle_moteurs, args=())
+#t_control=threading.Thread(target=controle_moteurs, args=())
 ###########	FIN initialisation du thread de reception des commandes
 
 ########### 	INITIALISATION Camera
@@ -23,17 +23,24 @@ cam.framerate=30
 ########### 	FIN initialisation camera
 
 
-########### 	CONNEXION Socket video
-socket_video=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-socket_video.connect(('192.168.1.18',9322))
-con_vid=socket_video.makefile('wb')
-########### 	FIN connexion socket video
-
 
 ###########	CONNEXION Socket capteurs
 socket_capteurs=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 socket_capteurs.connect(('192.168.1.18',9322))
 ###########	FIN connexion socket capteurs
+
+
+########### 	CONNEXION Socket video
+socket_video=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+socket_video.connect(('192.168.1.18',9323))
+con_vid=socket_video.makefile('wb')
+########### 	FIN connexion socket video
+
+
+###########	CONNEXION Socket commandes
+socket_cmd=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+socket_cmd.connect(('192.168.1.18',9324))
+###########	FIN connexion socket commandes
 
 
 ###########	INSTANCIATION de l'objet GPIO
@@ -70,24 +77,27 @@ vlx_2.set_address(0x31)
 try:
 	cam.start_recording(con_vid,format='h264')
 	#cam.wait_recording(20)
+	i=0
+	while i<5:
+		##########	TEST distance
 
-	##########	TEST distance
+		dist_capt1=vlx_1.distance-1.5
+		dist_capt2=vlx_2.distance-1.3
+		print("Distance capteur 1 : {0}cm".format(dist_capt1))
+		print("Distance capteur 2 : {0}cm".format(dist_capt2))
 
-	dist_capt1=vlx_1.distance-1.5
-	dist_capt2=vlx_2.distance-1.5
-	print("Distance capteur 1 : {0}cm".format(dist_capt1))
-	print("Distance capteur 2 : {0}cm".format(dist_capt2))
-
-	socket_capteurs.send((str(dist_capt1)+" "+str(dist_capt2)).encode("UTF-8"))
+		socket_capteurs.send((str(int(dist_capt1))+" "+str(int(dist_capt2))).encode("UTF-8"))
 
 
-	##########	FIN test distance
-
+		##########	FIN test distance
+		time.sleep(2)
+		i+=1
 finally:
 	print("fin")
 	cam.stop_recording()
 	con_vid.close()
 	socket_video.close()
 	socket_capteurs.close()
+	socket_cmd.close()
 
 ###########	FIN envoie video
