@@ -9,12 +9,12 @@ Le flux vidéo et les données de télémétrie permettront, grâce à un logici
 
 Les images prises par la caméra seront analysées afin de detecter les contours de chaques éléments.
 
-Deux capteurs télémetriques seront placés vers l'avant droit et gauche du robot (4 capteurs au total), calibrés avec la caméra. 
+Deux capteurs télémetriques seront placés vers l'avant droit et gauche du robot (2 capteurs au total), calibrés avec la caméra. 
 Ceux-ci permettront de connaitre la distance à gauche et à droite de l'image (voir schéma).
 ![Schéma capteur télémetrique](images/exemple_capt.jpg)
 
-Il y aura 4 données de télémetries par image.
-*Avec 4 capteurs seulement, le nombre d'éléments ayant une distance dans une image s'élève donc à 4. C'est assez peu. L'objectif ici est de voir si ce système donne des résultats satisfaisants, ou non, pour le mapping 3D.
+Il y aura 2 données de télémetries par image.
+*Avec 2 capteurs seulement, le nombre d'éléments ayant une distance dans l'image s'élève donc à deux. C'est assez peu. L'objectif ici est de voir si ce système donne des résultats satisfaisants, ou non, pour le mapping 3D.
 Dans le cas contraire, je rajouterai soit plus de capteurs, soit deux servomoteurs afin de "balayer" les surfaces avec les capteurs télémetriques.*
 
 La technique de mapping est la suivante pour chaque image (pour un seul coté) :
@@ -33,7 +33,7 @@ Le robot est une structure métallique comprenant deux motoreducteurs. Ceux-ci s
 
 Le système est principalement composé d'une Raspberry pi zero. Celle-ci transmettra les données vidéos et télémétriques par liaison WIFI à un ordinateur.
 
-Quatres capteurs télémetriques et une picaméra sont nécessaires.
+Deux capteurs télémetriques et une picaméra sont nécessaires.
 
 
 ## Mise à jour 
@@ -41,5 +41,6 @@ Quatres capteurs télémetriques et une picaméra sont nécessaires.
 * 19/11/2023 : Actualisation du principe de modélisation et de la composition du robot.
 * 26/11/2023 : Test des capteurs vl53l0x (en I2C) et TfMini (UART).
 * 17/12/2023 : Test de transmission et reception vidéo
+* 26/12/2023-01/01/2024 : Tests moteurs + envoi données telemetriques + combinaison d'envoi des données capteurs/video 
 
 

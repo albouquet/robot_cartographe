@@ -172,27 +172,6 @@ F 3 "~" H 4700 3510 50  0001 C CNN
 	1    4700 3600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transistor_BJT:2N2219 Q?
-U 1 1 656E86E5
-P 4600 4450
-F 0 "Q?" H 4790 4496 50  0000 L CNN
-F 1 "2N2219" H 4790 4405 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-39-3" H 4800 4375 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 4600 4450 50  0001 L CNN
-	1    4600 4450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4400 4450 3850 4450
-Wire Wire Line
-	3850 4450 3850 5250
-Wire Wire Line
-	5600 4450 5600 4850
-Wire Wire Line
-	5600 4850 3950 4850
-Wire Wire Line
-	3950 4850 3950 5250
 Wire Wire Line
 	4700 4650 4700 5750
 Connection ~ 4700 5750
@@ -351,4 +330,53 @@ F 3 "" H 8350 1950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8350 2150 8350 1950
+$Comp
+L Device:R R?
+U 1 1 65887173
+P 3700 4850
+F 0 "R?" H 3770 4896 50  0000 L CNN
+F 1 "R" H 3770 4805 50  0000 L CNN
+F 2 "" V 3630 4850 50  0001 C CNN
+F 3 "~" H 3700 4850 50  0001 C CNN
+	1    3700 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 65887774
+P 4100 4850
+F 0 "R?" H 4170 4896 50  0000 L CNN
+F 1 "R" H 4170 4805 50  0000 L CNN
+F 2 "" V 4030 4850 50  0001 C CNN
+F 3 "~" H 4100 4850 50  0001 C CNN
+	1    4100 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 656E86E5
+P 4600 4450
+F 0 "Q?" H 4790 4496 50  0000 L CNN
+F 1 "2N2219" H 4790 4405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 4800 4375 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 4600 4450 50  0001 L CNN
+	1    4600 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5250 3850 5000
+Wire Wire Line
+	3850 5000 3700 5000
+Wire Wire Line
+	3700 4700 3700 4450
+Wire Wire Line
+	3700 4450 4400 4450
+Wire Wire Line
+	3950 5250 4100 5250
+Wire Wire Line
+	4100 5250 4100 5000
+Wire Wire Line
+	4100 4700 5600 4700
+Wire Wire Line
+	5600 4700 5600 4450
 $EndSCHEMATC
