@@ -11,7 +11,7 @@ Les images prises par la caméra seront analysées afin de detecter les contours
 
 Deux capteurs télémetriques seront placés vers l'avant droit et gauche du robot (2 capteurs au total), calibrés avec la caméra. 
 Ceux-ci permettront de connaitre la distance à gauche et à droite de l'image (voir schéma).
-![Schéma capteur télémetrique](images/exemple_capt.jpg)
+![Schéma capteur télémetrique](images/example_capt.jpg)
 
 Il y aura 2 données de télémetries par image.
 *Avec 2 capteurs seulement, le nombre d'éléments ayant une distance dans l'image s'élève donc à deux. C'est assez peu. L'objectif ici est de voir si ce système donne des résultats satisfaisants, ou non, pour le mapping 3D.
