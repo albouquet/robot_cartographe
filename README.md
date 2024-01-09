@@ -16,11 +16,11 @@ Ceux-ci permettent de connaitre la distance à gauche et à droite de l'image se
 Il y a 2 données de télémetrie par image, ainsi que la position du robot.
 La position du robot est déterminée en fonction du temps du mode "avancer" et des différents angles pris par le robot.
 
-*Avec 2 capteurs seulement, le nombre d'éléments ayant une distance dans l'image s'élève donc à deux. C'est assez peu.
+*Avec 2 capteurs seulement, le nombre d'éléments ayant une distance dans l'image s'élève donc à deux. C'est assez peu.*
 
-L'objectif ici est de voir si ce système donne des résultats satisfaisants, ou non, pour le mapping 3D.
+*L'objectif ici est de voir si ce système donne des résultats satisfaisants, ou non, pour le mapping 3D.*
 
-Dans le cas contraire, je rajouterai soit plus de capteurs, soit deux servomoteurs afin de "balayer" les surfaces avec les capteurs télémetriques.*
+*Dans le cas contraire, je rajouterai soit plus de capteurs, soit deux servomoteurs afin de "balayer" les surfaces avec les capteurs télémetriques.*
 
 La technique de mapping est la suivante (pour chaque image et un seul coté) :
 * Réalisation d'une détéction de contours (+ détection de region) sur l'image.
