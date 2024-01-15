@@ -5,10 +5,8 @@ Celui-ci est commandé à distance et équipé d'une caméra embarquée et des c
 
 Le flux vidéo et les données de télémétrie permettent, grâce à un logiciel utilisant la bibliothéque VTK, de modéliser la zone en 3 dimensions.
 
-<video width="320" height="240" controls>
-  <source src="images/Projet_Bouquet.mp4" type="video/mp4">
-</video>
 
+![Vidéo présentation projet](/images/Projet_Bouquet.mp4)
 
 ## Principe de modélisation : 
 
