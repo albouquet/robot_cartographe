@@ -5,6 +5,9 @@ Celui-ci est commandé à distance et équipé d'une caméra embarquée et des c
 
 Le flux vidéo et les données de télémétrie permettent, grâce à un logiciel utilisant la bibliothéque VTK, de modéliser la zone en 3 dimensions.
 
+
+![](images/Projet_Bouquet.mp4)
+
 ## Principe de modélisation : 
 
 Les images prises par la caméra sont analysées afin de detecter les contours de chaques éléments.
@@ -36,9 +39,9 @@ La gestion des redondances de plan d'image est primordiale pour controler la jus
 
 ## Composition du robot
 
-Le robot est une structure métallique comprenant deux motoreducteurs. Ceux-ci sont alimentés par une batterie 18650, a travers un L298N.
+Le robot est une structure métallique comprenant deux motoreducteurs. Ceux-ci sont alimentés par une batterie 18650, à travers un L298N.
 
-Le système est principalement composé d'une Raspberry pi zero. Celle-ci transmettra les données vidéos et télémétriques par liaison WIFI à un ordinateur, ainsi que de controler les moteurs par PWM.
+Le système est principalement composé d'une Raspberry pi zero. Celle-ci transmet les données vidéos et télémétriques par liaison WIFI à un ordinateur, et controle les moteurs par PWM.
 
 Deux capteurs télémetriques vl53l0x et une picaméra sont aussi présents sur les GPIO et le connecteur MIPI de la Raspberry pi zero.
 
