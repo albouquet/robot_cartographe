@@ -63,8 +63,6 @@ def recup_capt():
 def recup_vid():
 	#########	RECUPERATION du flux video
 	try:
-		#cmdline = ['mpv','--fps=30','--cache=yes','-']
-		#player = subprocess.Popen(cmdline, stdin=subprocess.PIPE)
 		while True:
 			data = conn_vid.read(1024)
 			if not data:
@@ -105,18 +103,17 @@ while True:
 
 	#récupération de la touche:
 	event=keyboard.read_key()
-
+	
 	#traitement de la touche:
-	match event:
-		case "d":
+	if event == "d":
 			conn_cmd.send(b'd')
-		case "z":
+	elif event == "z":
 			conn_cmd.send(b'z')
-		case "q":
+	elif event == "q":
 			conn_cmd.send(b'q')
-		case " ":
+	elif event == " ":
 			conn_cmd.send(b' ')
-		case "p":
+	elif event == "p":
 			conn_cmd.send(b'p')
 			conn_cmd.close()
 			conn_vid.close()
