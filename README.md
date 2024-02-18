@@ -45,7 +45,7 @@ Celle-ci transmet les données vidéos et télémétriques par liaison WIFI à u
 
 Je pensais que le L298N permettrait d'alimenter la raspberry. Mais celle-ci demande trop de courant par rapport à la capacité de sortie du module (>0.5A).
 Par conséquent, j'ai ajouté une alimentation externe : 
-	* Deux batteries alimentent un régultateur 5v (L7805CV) délivrant 1.5A max.
+* Deux batteries alimentent un régultateur 5v (L7805CV) délivrant 1.5A max.
 
 
 ## Mise à jour 
