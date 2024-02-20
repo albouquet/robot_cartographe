@@ -221,5 +221,7 @@ Mais il comporte un certains nombres de points à améliorer, de la structure no
 ### A savoir
 
 Le programme à placer sur la Raspberry pi est prog_pi.py
+
 Le programme à placer sur l'ordinateur de l'utilisateur est prog_utilisateur.py
+
 Le programme pour mapper un plan 2D gràce à un fichier de données est mappage_2D.py
