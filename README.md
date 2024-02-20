@@ -50,6 +50,7 @@ Pour cela, j’ai utilisé le régulateur 5V L7805CV, combiné avec deux condens
 
 
 L’ensemble est soudé sur une carte à pastille :
+
 ![Figure 5: Régulateur 5V soudé sur plaque à pastille](images/alim.png)
 
 
@@ -76,6 +77,7 @@ Ils communiquent à travers un bus I2C (SDA, SCL). Par défaut, les deux ont l�
 Pour la changer (et pouvoir identifier les deux), j’utilise la broche XSHUT afin d’activer les capteurs un par un (et effectuer le changement d’adresse).
 
 Pour relier les deux capteurs au bus I2C de la Raspberry Pi, j’ai soudé un bus sur une plaque à pastille, afin de mettre en commun l’alimentation, le SDA et le SCL :
+
 ![Figure 6: Bus soudé pour relier les deux capteurs de distance au bus I2C](images/3.jpg)
 
 La bibliothèque python adafruit_vl53l0x permet un contrôle aisé des capteurs
@@ -151,7 +153,7 @@ Par conséquent, j’ai réalisé une calibration des capteurs grâce à un plan
 Les signaux PWM sont générés par la Raspberry pi. Ils vont de 0 à 3.3V lorsque le
 dutycycle est à 100 % :
 
-![Figure 14: Test PWM dutycycle à 10%(images/15.jpg)
+![Figure 14: Test PWM dutycycle à 10%](images/15.jpg)
 
 ![Figure 15: Test PWM dutycycle à 50%](images/14.jpg)
 
@@ -191,9 +193,9 @@ le robot ont pu être traitées afin de définir le plan de la zone d’évoluti
 
 ![Figure 16: Vrai plan du terrain de test](images/vrai_plan.png)
 
-![Figure 17: Plan 2D créé par le robot (conservation des points de vide)](images/plan_2D_test1.jpg)
+![Figure 17: Plan 2D créé par le robot (conservation des points de vide)](images/plan_2D_test1.png)
 
-![Figure 18: Plan 2D créé par le robot (sans point de vide)](images/plan_2D_test2.jpg)
+![Figure 18: Plan 2D créé par le robot (sans point de vide)](images/plan_2D_test2.png)
 
 
 
