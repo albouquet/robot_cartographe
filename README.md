@@ -85,18 +85,18 @@ La bibliothèque python adafruit_vl53l0x permet un contrôle aisé des capteurs
 
 Lorsque le capteur ne peut calculer la distance car celle-ci est trop grande (supérieur à 1.5 mètres), celui-ci renvoi 817 (plus de 8 mètres). C’est donc pris en compte lors de la réalisation du plan 2D.
 
-![Figure 6: Support](images/support.png)
-![Figure 7: pied_Support](images/pied_du_support.png)
-![Figure 8: Support_capteur](images/support_capteur.png)
-![Figure 9: Impre3D_1](images/5.jpg)
-![Figure 10: Impre3D_2](images/9.jpg)
-
 
 ## Partie V : Réalisation 3D
 
 Afin de maintenir les composants en place sur le support, j’ai dessiné sous FreeCAD un deuxième support, et l’ai imprimé avec mon imprimante 3D :
 
+![Figure 6: Support](images/support.png)
 
+![Figure 7: pied_Support](images/pied_du_support.png)
+![Figure 8: Support_capteur](images/support_capteur.png)
+
+![Figure 9: Impre3D_1](images/5.jpg)
+![Figure 10: Impre3D_2](images/9.jpg)
 
 ## Partie VI : Fonctionnement du robot
 
