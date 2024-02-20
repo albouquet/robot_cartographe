@@ -98,7 +98,7 @@ def controle_moteurs():
 		elif cmd == b'd':
 			# Rotation droite (90°)
 			dc_moteur1=400000
-			c_moteur2=400000
+			dc_moteur2=400000
 			pi1.write(25,1)
 			pi1.write(8,0)
 			pi1.write(9,0)
