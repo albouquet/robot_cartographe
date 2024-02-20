@@ -4,10 +4,12 @@
 ![Robot Cartographe](images/robot.jpg)
 
 
-## Introduction
+## Introduction
 
 L’objectif du projet est de créer un robot récupérant des informations télémétriques sur son environnement, afin d’en réaliser un mappage 2D de ce dernier.
+
 Grâce à une connexion WIFI, le robot doit pouvoir envoyer un flux vidéo à l’utilisateur, recevoir les commandes de navigation de celui-ci, et transmettre des données télémétriques (+ coordonnées x,y du robot).
+
 A coté de cela, un logiciel devra réaliser le plan 2D de l’environnement du robot, grâce aux données reçues.
 
 
