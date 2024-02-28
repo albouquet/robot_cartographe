@@ -186,7 +186,7 @@ Mais plusieurs problèmes ont été constatés :
 Pour que le plan final soit parfait, il est nécessaire d’avoir les coordonnées de positon
 du robot exacte et une fréquence d’envoi des données télémétriques assez grande.
 
-![](images/video_demo.mov)
+![VOIR video demo](images/video_demo.mov)
 
 
 ### Modélisation 2D de l’environnement
