@@ -186,6 +186,9 @@ Mais plusieurs problèmes ont été constatés :
 Pour que le plan final soit parfait, il est nécessaire d’avoir les coordonnées de positon
 du robot exacte et une fréquence d’envoi des données télémétriques assez grande.
 
+![video_demo](images/video_demo.mov)
+
+
 ### Modélisation 2D de l’environnement
 
 Avec le programme réalisé nommé « mappage_2D », les coordonnées envoyées par
